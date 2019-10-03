@@ -1,0 +1,37 @@
+{
+    "name": "tnmdev/ocs",
+    "description": "Integration with OCS",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TNM Developers",
+            "email": "developers@tnm.co.mw"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ext-soap": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "TNM\\OCS\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TNM\\OCS\\OcsServiceProvider"
+            ]
+        }
+    }
+}
