@@ -15,7 +15,6 @@ class ChangePrimaryOfferService extends \SoapClient
      * @var ChangePrimaryOfferRequest
      */
     private $request;
-    private $wsdl = "/services/ChangePrimaryOfferMgrService?wsdl";
 
     public function __construct(ChangePrimaryOfferRequest $request, array $options = [])
     {
@@ -35,6 +34,6 @@ class ChangePrimaryOfferService extends \SoapClient
 
     public function getWsdl(): string
     {
-        return config('ocs.base_url') . $this->wsdl;
+        return config('ocs.base_url') . config('ocs.change_primary_offer');
     }
 }
