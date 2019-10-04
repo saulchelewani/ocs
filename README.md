@@ -1,14 +1,15 @@
 # OCS
 ## Installation
-Install via composer
+1. Install via composer
 ```
 composer require tnmdev/ocs
 ```
+ 2. Publish config
+```
+php artisan vendor:publish --provider=TNM\OCS\OcsServiceProvider
+```
+3. Update OCS base url in `/config/ocs.php`
 
-Publish config
-```
-php artisan vendor:publish --provider=OcsServiceProvider
-```
 
 ## Testing
  ```
